@@ -4,8 +4,16 @@ const Flight = require('../models/flight');
 module.exports = {
   new: newTicket,
   create,
-  addToAvailable
+  addToAvailable,
+  delete: deleteTicket
 };
+
+function deleteTicket(req, res){
+  Ticket.findByIdAndDelete(req.params.id).then(function(){
+    console.log('ticket deleted');
+    res.redirect(`back`)
+  });
+}
 
 function addToAvailable(req, res){
  Flight.findById(req.params.flightId, function(err, flight){

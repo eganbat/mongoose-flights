@@ -103,6 +103,7 @@ table td {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
+  float: left;
 }
 
 #show-page div:nth-child(even) {
@@ -124,5 +125,4 @@ table td {
   width: 10rem;
   grid-column: 2 / 3;
 }
-
 

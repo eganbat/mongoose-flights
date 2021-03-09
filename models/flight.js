@@ -40,7 +40,3 @@ const flightSchema = new Schema({
 
 module.exports = mongoose.model('Flight', flightSchema);
 
-function deleteOne(id) {
-  const idx = flights.findIndex(flight => flight.id === parseInt(id));
-  flights.splice(idx, 1);
-}

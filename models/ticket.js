@@ -13,3 +13,8 @@ const ticketSchema = new Schema({
 });
 
 module.exports = mongoose.model('Ticket', ticketSchema);
+
+// function deleteOne(id) {
+//     const idx = tickets.findIndex(ticket => ticket.id === parseInt(id));
+//     tickets.splice(idx, 1);
+//   }
