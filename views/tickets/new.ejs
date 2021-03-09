@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<p>
+  <select>
+    <% tickets.forEach(function(t) { %>
+      <option><%= t.seat %></option>
+    <% }) %>
+  </select>
+</p>
+<form id="add-ticket-form" action="/tickets" method="POST">
+  <label>Seat:</label>
+  <input type="string" name="seat">
+  <label>Price:</label>
+  <input type="number" name="price">
+  <input type="submit" value="Confirm">
+</form>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: black;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: #4285F4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 50px 0 50px;
+}
+
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D6EAF8;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+body > main h1:first-child {
+  margin-bottom: 100px;
+}
+
+nav > a {
+  margin: 50px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav > a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+nav > a.active {
+  text-decoration: underline;
+}
+
+#new-form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#new-form *,
+#add-destination-form *,
+#add-ticket-form *,
+#add-per-to-available * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#new-form input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+}
+
+table {
+  font-size: 20px;
+}
+
+table thead th {
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+table td {
+  padding: 20px;
+  text-align: center;
+}
+
+#list a {
+  border-radius: 4px;
+  background-color: orange;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#list a:hover {
+  background-color: white;
+}
+
+#show-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
+#show-page div:nth-child(even) {
+  font-weight: bold;
+}
+
+#add-destination-form,
+#add-ticket-form,
+#add-per-to-available {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#add-destination-form input[type="submit"],
+#add-ticket-form input[type="submit"],
+#add-per-to-available input[type="submit"] {
+  width: 10rem;
+  grid-column: 2 / 3;
+}
+
+
